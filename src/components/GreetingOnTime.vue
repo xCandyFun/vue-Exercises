@@ -5,7 +5,8 @@ const time = date.getHours();
 
 <template>
   <div>
-    <h1 v-if="time<12">Good morning</h1>
+    <h1 v-if="time<10">Good morning</h1>
+    <h1 v-else-if="time<12">Good day</h1>
     <h1 v-else-if="time<18">Good afternoon</h1>
     <h1 v-else>Good evening</h1>
   </div>

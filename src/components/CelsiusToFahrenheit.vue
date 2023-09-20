@@ -1,16 +1,17 @@
 <script setup>
-import {ref} from "vue";
+import {computed, ref} from "vue";
 
 const celsius = ref('');
+
+const fahrenheit = computed(() => celsius.value*9/5+32)
 
 </script>
 
 <template>
   <div>
     <p>Convert from celsius to fahrenheit</p>
-    <p>Fahrenheit: {{celsius*9/5+32}}</p>
+    <p>Fahrenheit: {{fahrenheit}}</p>
     <input v-model="celsius" placeholder="Celsius"/>
-
   </div>
 </template>
 
